@@ -1,0 +1,12 @@
+﻿@using DataAccessLibrary
+<h3>Component</h3>
+
+@code {
+    [Inject]
+    public PeopleData PeopleData { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var test = await PeopleData.GetPeople();
+    }
+}
